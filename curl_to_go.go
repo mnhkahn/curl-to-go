@@ -90,7 +90,6 @@ func Parse(curl string) string {
 	gocode := ""
 	if len(req.headers) == 0 && req.data.ascii == "" && len(req.data.files) == 0 && req.basicauth.user == "" && !req.insecure {
 		render := renderSimple(req.method, req.url)
-		render = addTablePerLine(render, "\t")
 		gocode = fmt.Sprintf(simpleFuncCode, promo, getCurlFuncName(req.url), render)
 	} else {
 		render := renderComplex(req)
