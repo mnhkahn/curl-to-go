@@ -34,7 +34,7 @@ import (
 
 %s
 func curl%s(ctx context.Context, url string) ([]byte, error) {
-	%s
+%s
 }`
 	complexFuncCode = `package curl2go
 
@@ -48,7 +48,7 @@ import (
 
 %s
 func curl%s(ctx context.Context, url string) ([]byte, error) {
-	%s
+%s
 }`
 )
 
